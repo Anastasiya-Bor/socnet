@@ -3,6 +3,14 @@
   background-color: navajowhite;
 }
 
-.item {
-  color: white;
+.item a {
+  text-decoration: none;
+}
+
+.unActiveLink {
+  color: rgb(24, 163, 110);
+}
+
+.item a.activeLink {
+  color: rgb(255, 166, 0);
 }
