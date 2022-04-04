@@ -1,6 +1,7 @@
 .nav {
   grid-area: n;
   background-color: navajowhite;
+  padding: 20px;
 }
 
 .item a {
@@ -11,6 +12,6 @@
   color: rgb(24, 163, 110);
 }
 
-.item a.activeLink {
-  color: rgb(255, 166, 0);
+.activeLink {
+  color: rgb(140, 0, 255);
 }

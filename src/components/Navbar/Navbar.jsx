@@ -26,13 +26,34 @@ const Navbar = () => {
         </NavLink>
       </div>
       <div className={s.item}>
-        <a>News</a>
+        <NavLink
+          to="/news"
+          className={({ isActive }) =>
+            isActive ? s.activeLink : s.unActiveLink
+          }
+        >
+          News
+        </NavLink>
       </div>
       <div className={s.item}>
-        <a>Music</a>
+        <NavLink
+          to="/music"
+          className={({ isActive }) =>
+            isActive ? s.activeLink : s.unActiveLink
+          }
+        >
+          Music
+        </NavLink>
       </div>
       <div className={s.item}>
-        <a>Settings</a>
+        <NavLink
+          to="/settings"
+          className={({ isActive }) =>
+            isActive ? s.activeLink : s.unActiveLink
+          }
+        >
+          Settings
+        </NavLink>
       </div>
     </nav>
   );
