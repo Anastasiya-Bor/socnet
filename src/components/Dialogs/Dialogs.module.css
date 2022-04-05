@@ -7,18 +7,19 @@
     padding: 10px;
 }
 
-.dialogsItems .active {
+.activeDialog {
     color: rgb(140, 0, 255);
 }
 
-.dialog {
-
+.unActiveDialog {
+    color: rgb(24, 163, 110);
 }
+
+/* .dialog {
+
+} */
 
 .messages {
     padding: 10px;
 }
 
-.message {
-
-}
