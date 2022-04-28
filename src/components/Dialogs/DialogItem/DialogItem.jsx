@@ -1,16 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import s from "./../Dialogs.module.css";
+import style from "./../Dialogs.module.css";
 
 const DialogItem = (props) => {
   let path = "/dialogs/" + props.id;
   
   return (
-    <div className={s.dialog}>
+    <div className={style.dialog}>
       <NavLink
         to={path}
         className={({ isActive }) => 
-          isActive ? s.activeDialog : s.unActiveDialog
+          isActive ? style.activeDialog : style.unActiveDialog
         }
       >
         {props.name}
