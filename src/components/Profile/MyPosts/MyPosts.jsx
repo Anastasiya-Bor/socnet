@@ -1,6 +1,10 @@
+import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../redux/state";
 import style from "./MyPosts.module.css";
 import Post from "./Posts/Post";
+// import addPostActionCreator from "././"
+
 
 const MyPosts = (props) => {
 
@@ -9,12 +13,13 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   let addPost = () => {
-    props.dispatch( { type: 'ADD-POST' } );
+    props.dispatch(addPostActionCreator());
   }
 
   let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.dispatch( { type: 'UPDATE-NEW-POST-TEXT', newText: text } );
+    let action = updateNewPostTextActionCreator(text);
+    props.dispatch(action);
   }
 
   return (
