@@ -1,9 +1,7 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
 import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../redux/state";
 import style from "./MyPosts.module.css";
 import Post from "./Posts/Post";
-// import addPostActionCreator from "././"
 
 
 const MyPosts = (props) => {
