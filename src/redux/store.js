@@ -28,9 +28,10 @@ let store = {
     },
     sidebar: {},
   },
-  _callSubscriber() {
-    console.log("state changed");
-  },
+/*   _callSubscriber(state) {
+    // debugger
+    console.log("state changed ", state);
+  }, */
 
   getState() {
     return this._state;
