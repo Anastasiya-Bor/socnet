@@ -7,9 +7,9 @@ import { useSelector, useDispatch } from 'react-redux';
 
 
 const Dialogs = (props) => {
-  // let state = props.store.getState().dialogsPage;
-  let state = useSelector((state) => state.dialogsPage);
-  let dispatch = useDispatch();
+  let state = props.dialogsPage;
+  // let state = useSelector((state) => state.dialogsPage);
+  // let dispatch = useDispatch();
 
   let dialogsElements = state.dialogs
   .map( dialog => <DialogItem name={dialog.name} id={dialog.id} />);
@@ -20,12 +20,12 @@ const Dialogs = (props) => {
   let newMessageBody = state.newMessageBody;
 
   let onSendMessageClick = () => {
-    /* props.store. */dispatch(sendMessageCreator());
+    props.sendMessage();
   }
   
   let onNewMessageChange = (e) => {
     let body = e.target.value;
-   /*  props.store. */dispatch(updateNewMessageBodyCreator(body));
+    props.updateNewMessageBody(body);
   } 
 
   return (
