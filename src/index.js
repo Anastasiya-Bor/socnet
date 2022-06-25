@@ -4,23 +4,19 @@ import "./index.css";
 import App from "./App";
 import store from "./redux/reduxStore";
 import { Provider } from "react-redux";
-import StoreContext from "./StoreContext";
+// import { Provider }from "./StoreContext";
 
-let rerenderEntireTree = (state) => {
-  // debugger;
+let rerenderEntireTree = () => {
   ReactDOM.render(
-    <StoreContext.Provider value={store}>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <App />     
-      {/* </Provider>, */}
-    </StoreContext.Provider>,
+      </Provider>,
     document.getElementById("root")
   );
 };
 
-rerenderEntireTree(store.getState());
+rerenderEntireTree();
 
 store.subscribe(() => {
-  let state = store.getState();
-  rerenderEntireTree(state);
+  rerenderEntireTree();
 });
